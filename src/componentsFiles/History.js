@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from '../context/GlobsStat';
+import { Transaction } from './Transaction';
 
 export const History = () => {
+  const { transactions } = useContext(GlobalContext);
+
   return (
-    <div className="">
+    <div>
       {/* Header Section */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-0 border-b pb-3">
         <h3 className="text-xl text-[#142d45] font-bold">History</h3>
         <p className="text-blue-500 cursor-pointer hover:underline">See all</p>
       </div>
-
+      {/* Conditionally render the "Empty Yet" message */}
+      {transactions.length === 0 && (
+        <div className="text-gray-400 font-normal py-4 text-center">
+          Empty Yet
+        </div>
+      )}
       {/* History List */}
-      <ul className="space-y-2">
-        {/* Single History Item */}
-        <li className="flex justify-between items-center py-2 border-b">
-          <p className="text-gray-700 font-semibold text-base">Market</p>
-          <p className="text-green-500 font-semibold">+ $0</p>
-        </li>
-        {/* Additional history items can be added here */}
+      <ul className={`space-y-2 ${transactions.length === 0 ? 'hidden' : ''}`}>
+        {transactions.map(transaction => (
+          <Transaction
+            key={transaction.id}
+            transaction={transaction}
+          />
+        ))}
       </ul>
     </div>
   );

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa"; // Example icons
 // import "./IncomeExpensive.css"; // Import your custom CSS file
+import {GlobalContext} from '../context/GlobsStat'
 
 export const IncomeExpensive = () => {
+  const { transactions } = useContext(GlobalContext)
+
+  const amounts = transactions.map(transaction => transaction.amount)
+  const income = amounts.filter(item => item > 0).reduce((acc, curr) => acc + curr, 0).toFixed(2);
+  const expenses = ( amounts.filter(item => item < 0).reduce((acc, curr) => acc + curr, 0) * -1 ).toFixed(2);
   return (
     <div className="container">
       <div className="income-expense-wrapper flex justify-between">
@@ -16,8 +22,8 @@ export const IncomeExpensive = () => {
             <p className="label font-normal text-lg">Income</p>
           </div>
           <div>
-            <p className="amount text-xl">
-              $<span>0</span>
+            <p className="amount text-xl ">
+              $<span>{income}</span>
             </p>
           </div>
         </div>
@@ -32,7 +38,7 @@ export const IncomeExpensive = () => {
           </div>
           <div className="text-end">
             <p className="amount text-xl">
-              $<span>0</span>
+              $<span>{expenses}</span>
             </p>
           </div>
         </div>
