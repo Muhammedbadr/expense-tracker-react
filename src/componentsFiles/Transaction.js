@@ -1,4 +1,4 @@
-import {GlobalContext} from '../context/GlobsStat';
+import {GlobalContext} from '../context/GlobalState';
 import React, { useContext } from "react";
 // import {GlobalContext} from '../context/GlobsStat'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

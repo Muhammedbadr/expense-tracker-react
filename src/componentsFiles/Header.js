@@ -1,5 +1,5 @@
 import React,{useContext} from "react";
-import {GlobalContext} from '../context/GlobsStat'
+import {GlobalContext} from '../context/GlobalState'
 // import translattoEn from'../Transltion/en/global'
 // import translattoru from'../Transltion/ru/global'
 

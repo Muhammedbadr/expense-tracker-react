@@ -6,15 +6,18 @@ import RuFlag from '../ImageApp/russia.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Alert, Snackbar } from '@mui/material';  // Import Alert and Snackbar
 
 export const Title = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [isOpen, setIsOpen] = useState(false);
+  const [alertOpen, setAlertOpen] = useState(false); // State to manage the alert visibility
   const dropdownRef = useRef(null);
 
   const handleLanguageChange = (lang) => {
     setSelectedLanguage(lang);
     setIsOpen(false);
+    setAlertOpen(true); // Show alert when a language is clicked
   };
 
   // Handle clicks outside the dropdown to close it
@@ -31,6 +34,11 @@ export const Title = () => {
     };
   }, []);
 
+  // Close alert after some time or manually
+  const handleAlertClose = () => {
+    setAlertOpen(false);
+  };
+
   // Flag and label mapping based on the selected language
   const flagMapping = {
     en: { img: USFlag, label: "En" },
@@ -40,10 +48,11 @@ export const Title = () => {
   };
 
   return (
-    <div className="flex justify-between items-center my-4 px-2">
-      <h2 className="font-bold text-3xl text-[#142d45] bg-gradient-to-r from-[#103c66] to-teal-500 text-transparent bg-clip-text   rounded-md">
-        Expense Tracker
-      </h2>
+    <div className="flex justify-between  items-center my-4 px-2">
+      <h2 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-3xl text-[#142d45] bg-gradient-to-r from-[#103c66] to-teal-400 text-transparent bg-clip-text    transition-transform duration-300 ease-in-out">
+  Expense Tracker
+</h2>
+
 
       <div className="relative inline-block text-left" ref={dropdownRef}>
         <div
@@ -94,6 +103,13 @@ export const Title = () => {
           </div>
         )}
       </div>
+
+      {/* Alert component */}
+      <Snackbar open={alertOpen} autoHideDuration={6000} onClose={handleAlertClose}>
+        <Alert onClose={handleAlertClose} severity="warning" sx={{ width: '100%' }}>
+        This part is not complete yet.
+        </Alert>
+      </Snackbar>
     </div>
   );
 };
