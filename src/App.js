@@ -1,14 +1,13 @@
-
 // App.js
 import './App.css';
 import React from 'react';
 import './index.css'; // Ensure Tailwind is imported
 import { Header } from './componentsFiles/Header';
-import { IncomeExpensive } from './componentsFiles/IncomeExpensive'; // Ensure case matches the file name
+import { IncomeExpensive } from './componentsFiles/IncomeExpensive'; // Use the correct import
 import { Title } from './componentsFiles/Title';
 import { History } from './componentsFiles/History';
 import { NewTransaction } from './componentsFiles/NewTransaction';
-import { TextFooters } from './componentsFiles/TextFooters'; // Fix typo in footer component name
+import { TextFooters } from './componentsFiles/TextFooters'; // Ensure correct name
 import { GlobalProvider } from './context/GlobalState'; // Ensure the correct file name is used
 
 function App() {
@@ -38,7 +37,7 @@ function App() {
           </div>
 
           {/* Footer Section */}
-          <div className=" rounded-2xl focus:ring focus:ring-blue-300">
+          <div className="rounded-2xl focus:ring focus:ring-blue-300">
             <TextFooters />
           </div>
         </div>
