@@ -9,7 +9,7 @@ export const History = () => {
     <div>
       {/* Header Section */}
       <div className="flex justify-between items-center mb-0 border-b pb-3">
-        <h3 className="text-base md:text-xl text-[#142d45] font-bold">History</h3>
+        <h3 className="text-lg md:text-xl text-[#142d45] font-bold">History</h3>
         <p className="text-blue-500 cursor-pointer hover:underline">See all</p>
       </div>
       {/* Conditionally render the "Empty Yet" message */}

@@ -43,7 +43,7 @@ export const NewTransaction = () => {
       <div>
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-base md:text-xl text-[#142d45] font-bold">Add New Transaction</h3>
+          <h3 className="text-lg md:text-xl text-[#142d45] font-bold">Add New Transaction</h3>
         </div>
 
         {/* Form Inputs */}
