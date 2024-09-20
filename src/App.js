@@ -6,11 +6,12 @@ import { IncomeExpensive } from './componentsFiles/IncomeExpensive'; // Ensure c
 import { Title } from './componentsFiles/Title';
 import { History } from './componentsFiles/History';
 import { NewTransaction } from './componentsFiles/NewTransaction';
-import { TextFootter } from './componentsFiles/TextFootter';
+import { TextFotters } from './componentsFiles/TextFotters';
 import { GlobalProvider } from './context/GlobsStat'; // Ensure the correct file name is used
 
 function App() {
   return (
+    
     <GlobalProvider>
       <div className="w-full font-sans flex justify-center p-2 items-center flex-col">
         <div className="w-full max-w-xl">
@@ -38,7 +39,7 @@ function App() {
 
           {/* Add Button */}
           <div className="mt-1 rounded-2xl focus:ring focus:ring-blue-300">
-            <TextFootter/>
+            <TextFotters/>
           </div>
         </div>
       </div>

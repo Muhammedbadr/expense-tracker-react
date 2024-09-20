@@ -16,7 +16,7 @@ export const IncomeExpensive = () => {
         <div className="">
           <div className="flex items-center gap-1 " >
           <div className=" p-1 rounded-full bg-slate-600">
-          <FaArrowUp className="icon income-icon text-sm" /> {/* Income icon */}
+            <FaArrowUp className="icon income-icon text-sm" /> {/* Income icon */}
 
             </div>
             <p className="label font-normal text-lg">Income</p>

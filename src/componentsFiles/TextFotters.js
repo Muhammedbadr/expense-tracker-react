@@ -1,7 +1,7 @@
 import React from "react";
 import "./AnimatedButton.css"; // Import your custom CSS file
 
-export const TextFootter = () => {
+export const TextFotters = () => {
   return (
     <div className="mt-1 footer">
 

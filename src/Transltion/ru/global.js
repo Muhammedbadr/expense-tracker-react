@@ -1,7 +1,7 @@
-const global_ru = {
-    total_balance: 'Общий баланс',
-    // Add other translations here
-  };
+// const global_ru = {
+//     total_balance: 'Общий баланс',
+//     // Add other translations here
+//   };
   
-  export default global_ru;
+//   export default global_ru;
   

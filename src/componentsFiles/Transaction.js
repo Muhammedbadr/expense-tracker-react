@@ -34,13 +34,6 @@ export const Transaction = ({ transaction }) => {
   </button>
 </div>
 
-
-
-
-
-
-
-
     </li>
   );
 };

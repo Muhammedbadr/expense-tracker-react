@@ -1,7 +1,7 @@
-const global_en = {
-    total_balance: 'Total Balance',
-    // Add other translations here
-  };
+// const global_en = {
+//     total_balance: 'Total Balance',
+//     // Add other translations here
+//   };
   
-  export default global_en;
+//   export default global_en;
   
