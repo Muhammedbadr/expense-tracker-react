@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa"; // Example icons
 // import "./IncomeExpensive.css"; // Import your custom CSS file
 import {GlobalContext} from '../context/GlobalState'
-export const IncomeExpensive = () => {
+export const IncomeExpense = () => {
   const { transactions } = useContext(GlobalContext)
 
   const amounts = transactions.map(transaction => transaction.amount)

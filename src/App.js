@@ -3,7 +3,8 @@ import './App.css';
 import React from 'react';
 import './index.css'; // Ensure Tailwind is imported
 import { Header } from './componentsFiles/Header';
-import { IncomeExpensive } from './componentsFiles/IncomeExpensive'; // Use the correct import
+import { IncomeExpense } from './componentsFiles/IncomeExpense';
+
 import { Title } from './componentsFiles/Title';
 import { History } from './componentsFiles/History';
 import { NewTransaction } from './componentsFiles/NewTransaction';
@@ -23,7 +24,7 @@ function App() {
           {/* Income and Expense Section */}
           <div className="bg-gradient-to-r from-[#103c66] to-teal-500 text-white rounded-2xl p-4 shadow-lg h-[200px] flex flex-col justify-between mb-4">
             <Header />
-            <IncomeExpensive />
+            <IncomeExpense />
           </div>
 
           {/* History Section */}
