@@ -3,7 +3,7 @@ import AppReducer from "./AppReducer"; // Ensure AppReducer is correctly impleme
 
 // Initialize transactions from localStorage if they exist, or default to an empty array
 const initialState = {
-  transactions: JSON.parse(localStorage.getItem("tasks")) || []
+  transactions: JSON.parse(localStorage.getItem("transactions")) || []
 };
 
 // Create the context
@@ -15,7 +15,7 @@ export const GlobalProvider = ({ children }) => {
 
   // Sync state with localStorage whenever state changes
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(state.transactions));
+    localStorage.setItem("transactions", JSON.stringify(state.transactions));
   }, [state.transactions]);
 
   // Actions
